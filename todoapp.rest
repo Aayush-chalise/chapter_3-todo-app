@@ -1,0 +1,52 @@
+### GET 
+GET http://localhost:5003
+
+### Register a user POST auth/register
+POST http://localhost:5003/auth/register
+// the server should know what type of data it is processing so content-type is necessary . why application/json , application : this indicates the broad category of the data. In this case, application signifies that the data is a specific kind of application data, as opposed to something like text, image, audio, or video. json- tells the server data is in json format
+Content-type: application/json 
+
+{
+  "username": "chaliseaayush2006@gmail.com",
+  "password": "aayush999"
+}
+### Login a user
+POST http://localhost:5003/auth/login
+Content-type: application/json 
+
+{
+  "username": "chaliseaayush2006@gmail.com",
+  "password": "aayush999"
+}
+
+
+### Fetch all todos 
+
+GET http://localhost:5003/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ4MzMwMTM4LCJleHAiOjE3NDg0MTY1Mzh9.MbRBKPC3BD0038HVOTWf7Q1TaE0kDuBDKlqpeXGM_Aw
+### Creates a new todo POST/ TODOS
+
+POST http://localhost:5003/todos
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ4MzMwMTM4LCJleHAiOjE3NDg0MTY1Mzh9.MbRBKPC3BD0038HVOTWf7Q1TaE0kDuBDKlqpeXGM_Aw
+Content-Type: application/json
+
+{
+  "task" : "Finish coding the projects"
+}
+
+
+### Update a todo PUT/TODOS/:ID (protected)
+
+PUT http://localhost:5003/todos/2?page=4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ4MzMwMTM4LCJleHAiOjE3NDg0MTY1Mzh9.MbRBKPC3BD0038HVOTWf7Q1TaE0kDuBDKlqpeXGM_Aw
+Content-type: application/json
+
+{
+  "completed": 1
+}
+
+### Delete a todo DELETE/TODOS/:ID (protected)
+
+DELETE http://localhost:5003/todos/2?
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ4MzMwMTM4LCJleHAiOjE3NDg0MTY1Mzh9.MbRBKPC3BD0038HVOTWf7Q1TaE0kDuBDKlqpeXGM_Aw
+Content-type: application/json
