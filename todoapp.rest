@@ -7,8 +7,8 @@ POST http://localhost:5003/auth/register
 Content-type: application/json 
 
 {
-  "username": "chaliseaayush2006@gmail.com",
-  "password": "aayush999"
+  "username": "asdf@gmail.com",
+  "password": "aayush99"
 }
 ### Login a user
 POST http://localhost:5003/auth/login

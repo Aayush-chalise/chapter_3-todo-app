@@ -264,9 +264,10 @@
       isLoading = true;
       const response = await fetch(apiBase + "todos", {
         headers: { Authorization: token },
-      });
+      }); // todos api endpoint hit garxa with authorization token in the headers(usually to verify the user is logged in or has permission).
       const todosData = await response.json();
       todos = todosData;
+      console.log(todos);
       isLoading = false;
       renderTodos();
     }

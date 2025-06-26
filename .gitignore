@@ -1,0 +1,27 @@
+
+
+# Node
+node_modules/
+npm-debug.log
+.env
+
+# Logs
+*.log
+
+# Build Output
+dist/
+build/
+
+# Docker volumes and generated data
+docker-data/
+postgres-data/
+
+# Prisma
+.prisma/
+
+# System files
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/

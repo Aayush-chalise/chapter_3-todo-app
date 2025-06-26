@@ -1,5 +1,5 @@
 {
-  "name": "chapter_2",
+  "name": "chapter_3",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -10,10 +10,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "A full stack todo application that uses a Nodejs backend a SQlite database and JWT authentication",
+  "description": "A dockerized full stack todo application that uses a NodeJS backend, a PostgreSQL database, a Prisma ORM, and JWT Authentication",
   "dependencies": {
+    "@prisma/client": "^6.9.0",
     "bcryptjs": "^3.0.2",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.0",
+    "prisma": "^6.9.0"
   }
 }
