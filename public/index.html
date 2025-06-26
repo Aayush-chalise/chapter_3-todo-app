@@ -218,6 +218,10 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username: emailVal, password: passVal }),
           });
+          if (!response.ok) {
+            const errorText = await response.text(); // Read plain error response
+            throw new Error(`❌ ${response.status} ${errorText}`);
+          }
           data = await response.json();
         } else {
           // login an account
