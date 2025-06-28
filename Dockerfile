@@ -13,7 +13,11 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+#Generate prisma client
 RUN npx prisma generate
+
+# Run migrations in production mode
+RUN npx prisma migrate deploy
 
 # Expose the port that the app runs on
 EXPOSE 5003

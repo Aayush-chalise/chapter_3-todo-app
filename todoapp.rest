@@ -7,8 +7,8 @@ POST http://localhost:5003/auth/register
 Content-type: application/json 
 
 {
-  "username": "asdf@gmail.com",
-  "password": "aayush99"
+  "username": "hahaha@gmail.com",
+  "password": "hahahahaha"
 }
 ### Login a user
 POST http://localhost:5003/auth/login
@@ -50,3 +50,16 @@ Content-type: application/json
 DELETE http://localhost:5003/todos/2?
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ4MzMwMTM4LCJleHAiOjE3NDg0MTY1Mzh9.MbRBKPC3BD0038HVOTWf7Q1TaE0kDuBDKlqpeXGM_Aw
 Content-type: application/json
+
+
+@baseUrl = https://chapter-3-todo-app.onrender.com
+@token = your_actual_jwt_token_here
+
+### Register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "aayush",
+  "password": "aayush99"
+}
