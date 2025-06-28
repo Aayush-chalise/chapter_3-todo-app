@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Copy environment variables into container  
+COPY .env .env
+
 #Generate prisma client
 RUN npx prisma generate
 
