@@ -7,7 +7,7 @@ import authMiddleware from "./middleware/authMiddleware.js";
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5003;
 console.log(process.env.PORT);
 // if environment variable ma PORT ko value xa vane tyo use garxa ra yedi xaina vane 5003 use garxa which is as a backup.
 
